@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Drop Chess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="game-panel">
+      <h1 id="gameTitle" class="title">Reverse Drop Chess 10x10</h1>
+      <p id="status" class="status"></p>
+      <p id="actionBanner" class="action-banner" aria-live="polite"></p>
+      <div id="board" class="board" aria-label="board"></div>
+    </section>
+    <aside class="side-panel">
+      <section class="group">
+        <h2 id="langTitle" class="group-title">Language</h2>
+        <div class="row">
+          <button id="langZh" class="btn active">简体中文</button>
+          <button id="langEn" class="btn">English</button>
+        </div>
+      </section>
+      <section class="group">
+        <h2 id="modeTitle" class="group-title">Mode</h2>
+        <div class="row">
+          <button id="modeLocal" class="btn active">Local 1v1</button>
+          <button id="modePve" class="btn">PVE</button>
+          <button id="modeHost" class="btn">Online Host</button>
+          <button id="modeJoin" class="btn">Online Join</button>
+        </div>
+      </section>
+      <section class="group">
+        <h2 id="setupTitle" class="group-title">Setup</h2>
+        <div class="row">
+          <label><span id="labelBlack">Black</span>
+            <input id="blackCount" class="input" type="number" min="1" max="30" value="3">
+          </label>
+          <label><span id="labelWhite">White</span>
+            <input id="whiteCount" class="input" type="number" min="1" max="30" value="5">
+          </label>
+        </div>
+        <div class="row" style="margin-top: 8px;">
+          <button id="manualSetup" class="btn">Manual Setup</button>
+          <button id="randomSetup" class="btn">Random Setup</button>
+          <button id="startPlay" class="btn">Restart</button>
+        </div>
+      </section>
+      <section class="group">
+        <h2 id="remoteTitle" class="group-title">Remote</h2>
+        <div class="row">
+          <button id="createRoom" class="btn">Create Room</button>
+          <button id="disconnectRoom" class="btn">Disconnect</button>
+        </div>
+        <div class="row" style="margin-top: 8px;">
+          <input id="joinInput" class="input" style="width: 140px;" placeholder="room id">
+          <button id="joinRoom" class="btn">Join Room</button>
+        </div>
+        <div id="roomInfo" class="room-id">Not connected</div>
+      </section>
+      <section class="group">
+        <h2 id="stateTitle" class="group-title">State</h2>
+        <p id="stats" class="stats">Black: 0 | White: 0</p>
+        <p id="hintRules" class="hint"></p>
+      </section>
+    </aside>
+  </main>
+  <script src="./assets/js/game.js"></script>
+</body>
+</html>
