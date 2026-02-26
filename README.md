@@ -2,6 +2,8 @@
 
 ![pic](./pic.png)
 
+在线试玩：https://meredith2328.github.io/reverseChess/
+
 ## 中文说明
 
 ### 项目简介
