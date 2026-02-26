@@ -1,5 +1,7 @@
 # Reverse Drop Chess (10x10)
 
+![pic](./pic.png)
+
 ## 中文说明
 
 ### 项目简介
